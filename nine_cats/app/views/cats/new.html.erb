@@ -1,0 +1,32 @@
+<form action="create" method="post">  
+
+    <label for="name"> Name </label> 
+    <input id="name" type="text" name="cat[name]"> 
+<br>
+    <label for="sex"> Sex </label> 
+    <input id="sex" type="radio" name="cat[sex]"> 
+<br>
+    <label for="color"> Color </label> 
+
+    <select name="color" id="color">
+        <option disabled selected value> -- select an option -- </option>
+        <option value="black">black</option>
+        <option value="white">white</option>
+        <option value="gray">gray</option>
+        <option value="orange">orange</option>
+        <option value="brown">brown</option>
+    </select>
+
+    <input id="color" type="submit" name="cat[color]"> 
+<br>
+    <label for="birth_date"> Birth Date: </label> 
+    <input type="date" id="birth_date" name="cat[birth_date]">
+
+<br> 
+    <label for="description"> Description </label>
+<br> 
+    <textarea id="description" name="cat[description]" rows="4" cols="50">
+    Enter a Description. 
+    </textarea>
+
+</form>
