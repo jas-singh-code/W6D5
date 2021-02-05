@@ -40,3 +40,330 @@ Migrating to CreateCats (20210205171505)
   ↳ bin/rails:9
   [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johncheung/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (295.9ms)[0m  [1m[35mCREATE DATABASE "nine_cats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (167.9ms)[0m  [1m[35mCREATE DATABASE "nine_cats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210205171505)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-05 20:37:27.982602"], ["updated_at", "2021-02-05 20:37:27.982602"]]
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210205171505)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-05 20:37:28.157721"], ["updated_at", "2021-02-05 20:37:28.157721"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-05 20:37:28.169142"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1922-04-05"], ["color", "black"], ["name", "Garfield"], ["sex", "M"], ["description", "its Garfield"], ["created_at", "2021-02-05 20:37:35.021093"], ["updated_at", "2021-02-05 20:37:35.021093"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2000-04-05"], ["color", "white"], ["name", "Kitty"], ["sex", "F"], ["description", "its Kitty"], ["created_at", "2021-02-05 20:37:35.032698"], ["updated_at", "2021-02-05 20:37:35.032698"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-04-05"], ["color", "black"], ["name", "Son-cat"], ["sex", "F"], ["description", "its Son-cat"], ["created_at", "2021-02-05 20:37:35.423813"], ["updated_at", "2021-02-05 20:37:35.423813"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats" for ::1 at 2021-02-05 16:16:10 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jaspreet/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cat" for ::1 at 2021-02-05 16:16:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cat"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cat" for ::1 at 2021-02-05 16:17:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cat"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cats" for ::1 at 2021-02-05 16:17:06 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats" for ::1 at 2021-02-05 16:17:47 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats" for ::1 at 2021-02-05 16:19:46 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats" for ::1 at 2021-02-05 16:23:11 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats/1" for ::1 at 2021-02-05 16:23:15 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats/1/__better_errors" for ::1 at 2021-02-05 16:23:46 -0500
+Started GET "/cats" for ::1 at 2021-02-05 16:25:33 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats" for ::1 at 2021-02-05 16:27:16 -0500
+
+LoadError - Unable to autoload constant CatsController, expected /mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/controllers/cats_controller.rb to define it:
+
+Started GET "/cats" for ::1 at 2021-02-05 16:27:50 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jaspreet/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as */*
+Completed 500 Internal Server Error in 7384ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/views":
+  app/controllers/cats_controller.rb:7:in `index'
+
+Started GET "/cats" for ::1 at 2021-02-05 16:29:39 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jaspreet/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as */*
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered collection of cats/_cat.html.erb [3 times] (0.8ms)
+  Rendered cats/index.html.erb within layouts/application (4427.0ms)
+Completed 200 OK in 13280ms (Views: 12855.4ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/cats" for ::1 at 2021-02-05 16:30:36 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered collection of cats/_cat.html.erb [3 times] (0.5ms)
+  Rendered cats/index.html.erb within layouts/application (145.5ms)
+Completed 200 OK in 961ms (Views: 959.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/1" for ::1 at 2021-02-05 16:30:45 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 1.2ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+    <ul> '.freeze; render: @cat.name ;@output_buffer.sa...
+                         ^
+/mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/views/cats/show.html.erb:3: syntax error, unexpected ':', expecting keyword_end
+...'        <li> '.freeze; render: @cat.color ;@output_buffer.s...
+...                              ^
+/mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/views/cats/show.html.erb:4: syntax error, unexpected ':', expecting keyword_end
+        <li> '.freeze; render: @cat.sex ;@output_buffer.saf...
+                             ^
+/mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/views/cats/show.html.erb:5: syntax error, unexpected ':', expecting keyword_end
+        <li> '.freeze; render: @cat.birth_date ;@output_buf...
+                             ^
+/mnt/c/Users/jaspr/Downloads/App Academy/Classwork_W6D5/nine_cats/app/views/cats/show.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+        <li> '.freeze; render: @cat.discription ;@output_bu...
+                             ^:
+  app/views/cats/show.html.erb:2:in `'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/31fff7311ece5cec/variables" for ::1 at 2021-02-05 16:30:46 -0500
+Started GET "/cats/1" for ::1 at 2021-02-05 16:37:17 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (7.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_cat.html.erb (292.3ms)
+  Rendered cats/show.html.erb within layouts/application (467.6ms)
+Completed 500 Internal Server Error in 921ms (ActiveRecord: 8.3ms)
+
+
+
+NoMethodError - undefined method `discription' for #<Cat:0x000055badbbcab60>
+Did you mean?  description:
+  app/views/cats/_cat.html.erb:5:in `_app_views_cats__cat_html_erb___1119287250255706238_47130520356180'
+  app/views/cats/show.html.erb:2:in `_app_views_cats_show_html_erb__2476341490475987825_47130519647120'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/8fea26217e043ae3/variables" for ::1 at 2021-02-05 16:37:18 -0500
+Started POST "/__better_errors/8fea26217e043ae3/variables" for ::1 at 2021-02-05 16:37:43 -0500
+Started GET "/cats/1" for ::1 at 2021-02-05 16:37:44 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_cat.html.erb (1.7ms)
+  Rendered cats/show.html.erb within layouts/application (184.9ms)
+Completed 200 OK in 1212ms (Views: 1205.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cats" for ::1 at 2021-02-05 16:37:56 -0500
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered collection of cats/_cat.html.erb [3 times] (2.0ms)
+  Rendered cats/index.html.erb within layouts/application (163.5ms)
+Completed 200 OK in 1161ms (Views: 1157.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/2" for ::1 at 2021-02-05 16:38:20 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_cat.html.erb (1.8ms)
+  Rendered cats/show.html.erb within layouts/application (158.2ms)
+Completed 200 OK in 1239ms (Views: 1236.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/2" for ::1 at 2021-02-05 16:45:52 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (903.7ms)
+Completed 500 Internal Server Error in 1266ms (ActiveRecord: 1.1ms)
+
+
+
+NameError - undefined local variable or method `cat' for #<#<Class:0x000055badbe5bdc0>:0x00007f59566d36a0>
+Did you mean?  @cat:
+  app/views/cats/show.html.erb:7:in `_app_views_cats_show_html_erb__2476341490475987825_70010839404920'
+  app/controllers/cats_controller.rb:10:in `show'
+
+Started POST "/__better_errors/4ec9a38dcedfe105/variables" for ::1 at 2021-02-05 16:45:54 -0500
+Started GET "/cats/2" for ::1 at 2021-02-05 16:46:59 -0500
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1236ms (Views: 1230.2ms | ActiveRecord: 0.9ms)
+
+

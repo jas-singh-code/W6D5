@@ -1,0 +1,33 @@
+<h1> This Cat </h1>
+    <%#= render "cat", cat: @cat  %>
+    
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2"> <%= @cat.name %> </th>
+            </tr>
+        </thead>
+
+        <tbody> 
+            <tr> 
+                <td> Cat Color </td>
+                <td> <%= @cat.color %> </td>
+            </tr>
+
+             <tr> 
+                <td> Cat Sex </td>
+                <td> <%= @cat.sex %> </td>
+            </tr>
+
+             <tr> 
+                <td> Cat Birthday </td>
+                <td> <%= @cat.birth_date %> </td>
+            </tr>
+
+             <tr> 
+                <td> Cat Description </td>
+                <td> <%= @cat.description %> </td>
+            </tr>
+
+
+        </tbody>
